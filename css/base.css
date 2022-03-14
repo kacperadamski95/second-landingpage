@@ -3,3 +3,47 @@ html {
 font-size: 62.5%;
 font-family: 'Lato', sans-serif;
 }
+
+:root {
+    --primary-color: rgb(243,243,243);
+    --secondary-color: rgb(235,234,235);
+    --main-background-color: rgb(191,177,196);
+    --font-color-primary: rgb(255,255,255);
+    --font-color-secondary: rgb(0,0,0);
+}
+
+
+header {
+    background-color: var(--main-background-color);
+}
+
+h2,
+h3 {
+    background-color: var(--font-color-primary);
+    color: var(--font-color-primary)
+}
+
+h4 {
+    color: var(--font-color-secondary)
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+    .second--image,
+    .third--image {
+        width: 36rem;
+        height: 36rem;
+    }
+
+    .section--second {
+        display: column;
+        justify-content: center;
+    }   
+}
+
+
+/* Desktop and tablet */
+@media only screen and (min-width: 769px) {
+
+}
