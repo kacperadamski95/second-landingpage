@@ -17,7 +17,7 @@ header {
     background-color: var(--main-background-color);
 }
 
-h2,
+/* h2,
 h3 {
     background-color: var(--font-color-primary);
     color: var(--font-color-primary)
@@ -25,21 +25,79 @@ h3 {
 
 h4 {
     color: var(--font-color-secondary)
+} */
+
+.section_anchor {
+    background-color: rgb(255,255,255);
+    color: rgb(194,181,199);
+    padding-top: 1.9rem;
+    padding-bottom: 1.9rem;
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
 }
 
+.image--background {
+    background-image: url("first.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+}
+
+body {
+    position: relative;
+
+}
+
+header {
+    z-index: 2;
+}
+
+.section--second,
+.section--third {
+    background-color: rgb(191,177,196);
+}
+
+.section--logos {
+    background-color: rgb(235,234,235);
+}
+
+.section--fifth {
+    background-color: var(--font-color-primary);
+}
 
 /* Mobile */
 @media only screen and (max-width: 768px) {
+    * {
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
     .second--image,
     .third--image {
-        width: 36rem;
-        height: 36rem;
+        width: 33rem;
+        height: 33rem;
     }
 
     .section--second {
         display: column;
         justify-content: center;
     }   
+
+    .footer_icons img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .section--logos img {
+        width: 15rem;
+        height: 9rem;
+    }
+
+    .section--sixth {
+        background-image: url("fourth.jpg");
+    }
 }
 
 
