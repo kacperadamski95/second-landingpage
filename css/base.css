@@ -23,8 +23,9 @@ font-family: 'Lato', sans-serif;
 * {box-sizing: border-box}
 
 body {
-    position: relative;
-    font-size: var(--primary-font-size)
+    /* position: relative; */
+    font-size: var(--primary-font-size);
+    margin: 0;
 }
 
 section {    
@@ -181,12 +182,6 @@ h2 {
         flex-direction: column;
         justify-content: center;
     }   
-
-    .footer_icons img {
-        width: var(--space--l);
-        height: var(--space--l);
-    }
-
     
     .section--logos img {
         width: 15rem;
@@ -476,6 +471,7 @@ h2 {
 
     .section--seventh p {
         font-size: var(--primary-font-size);
+        color: black;
     }
 
     input {
