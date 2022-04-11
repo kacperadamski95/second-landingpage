@@ -4,7 +4,44 @@ html {
     font-family: 'Lato', sans-serif;
     }
 
+:root {
+    --main-background-color: rgb(191,177,196);
+    --background-color--transparent: rgb(0,0,0,0);
+    --font-color-primary: rgb(255,255,255);
+    --font-color-secondary: rgb(0,0,0);
+    --logos-color: rgb(235,234,235);
+    --button-color: rgb(196,183,200);
+    --font-size--base: 1.6rem;
+    --font-size-h2--desktop: 6.2rem;
+    --font-size-h3--mobile: 2.5rem;
+    --font-size-h3--desktop: 4rem;
+    --font-weight--bold: 700;
+    --font-weight--lighter: 100;
+    --button-width--primary: 15.5rem;
+    --button-height--primary: 6.3rem;
+    --button-width-primary--desktop: 20rem;
+    --button-height-primary--desktop: 6.2rem;
+    --button-width-secondary--desktop: 13rem;
+    --button-height-secondary--desktop: 4.5rem;
+    --button-border--style: none;
+    --input-width--primary: 24rem;
+    --input-width--secondary: 12rem;
+    --input-height--primary: 5.5rem;
+    --input-height--secondary: 6rem;
+    --input-border--style: none;
+    --space--xs: 0.5rem;
+    --space--s: 1rem;
+    --space--m: 1.5rem;
+    --space--l: 2rem;
+    --space--xl: 2.5rem;
+    --space--xxl: 3rem;
+}
+
 * {box-sizing: border-box}
+
+footer {
+    color: var(--font-color-secondary);
+}
 
 .footer_icons img {
     width: var(--space--l);
@@ -75,5 +112,20 @@ html {
     .footer-information {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer__column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__column a {
+        text-decoration: underline;
+        padding-bottom: 3vh;
+    }
+
+    .footer_icons {
+        padding-top: 1.5vw;
     }
 }    

@@ -5,13 +5,30 @@ font-family: 'Lato', sans-serif;
 }
 
 :root {
-    --primary-color: rgb(243,243,243);
-    --secondary-color: rgb(235,234,235);
     --main-background-color: rgb(191,177,196);
+    --background-color--transparent: rgb(0,0,0,0);
     --font-color-primary: rgb(255,255,255);
     --font-color-secondary: rgb(0,0,0);
-    --primary-font-size: 1.6rem;
-    --font-size-h2-desktop: 6.2rem;
+    --logos-color: rgb(235,234,235);
+    --button-color: rgb(196,183,200);
+    --font-size--base: 1.6rem;
+    --font-size-h2--desktop: 6.2rem;
+    --font-size-h3--mobile: 2.5rem;
+    --font-size-h3--desktop: 4rem;
+    --font-weight--bold: 700;
+    --font-weight--lighter: 100;
+    --button-width--primary: 15.5rem;
+    --button-height--primary: 6.3rem;
+    --button-width-primary--desktop: 20rem;
+    --button-height-primary--desktop: 6.2rem;
+    --button-width-secondary--desktop: 13rem;
+    --button-height-secondary--desktop: 4.5rem;
+    --button-border--style: none;
+    --input-width--primary: 24rem;
+    --input-width--secondary: 12rem;
+    --input-height--primary: 5.5rem;
+    --input-height--secondary: 6rem;
+    --input-border--style: none;
     --space--xs: 0.5rem;
     --space--s: 1rem;
     --space--m: 1.5rem;
@@ -20,33 +37,53 @@ font-family: 'Lato', sans-serif;
     --space--xxl: 3rem;
 }
 
-* {box-sizing: border-box}
+*    {
+    box-sizing: border-box
+    }
 
 body {
-    /* position: relative; */
-    font-size: var(--primary-font-size);
+    font-size: var(--font-size--base);
     margin: 0;
+    color: var(--font-color-primary);
 }
 
 section {    
-    padding-left: var(--space--xl);
-    padding-right: var(--space--xl);
     width: 100vw;
 }
 
 button {
     background-color: var(--font-color-primary);
-    color: rgb(196,183,200);
-    font-weight: bold;
-    width: 15.5rem;
-    height: 6.3rem;
-    border-style: none;
+    color: var(--button-color);
+    font-weight: var(--font-weight--bold);
+    width: var(--button-width--primary);
+    height: var(--button-height--primary);
+    border-style: var(--button-border--style);
+}
+
+button:hover {
+    border: 0.3rem solid violet;
+}
+
+input[type="submit"] {
+    width: var(--input-width--secondary);
+    text-align: center;
+    border-style: var(--input-border--style);
+    background-color: var(--font-color-primary);
+    margin-bottom: 3.5rem;
+    color: var(--main-background-color);
+    font-weight: var(--font-weight--bold);
+}
+
+label {
+    visibility: hidden;
+    width: 0.01rem;
+    height: 0.01rem;
+    font-size: 0.01rem;
 }
 
 .section--first a {
     margin-top: 3.5rem;
-    background-color: transparent;
-    color: var(--font-color-primary);
+    background-color: var(--background-color--transparent);
     padding-top: var(--space--l);
     text-decoration: underline;
 }
@@ -65,7 +102,7 @@ button {
 }
 
 .section--logos {
-    background-color: rgb(235,234,235);
+    background-color: var(--logos-color);
 }
 
 .section--fifth {
@@ -74,23 +111,27 @@ button {
 
 .header {
     height: 8rem;
-    background-color: transparent;
+    background-color: var(--background-color--transparent);
     z-index: 2;
     position: relative;
     font-size: 3.2rem;
 }
 
 .image--background {
-    background-image: url("../images/first.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100vw;
+    background-image: url("../images/header--background-image.jpg");
     min-height: 50rem;
-    background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
+}
+
+.image--background,
+.section--sixth {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
 }
 
 .section--first {
@@ -108,35 +149,22 @@ button {
 }
 
 .section--sixth {
-    background-image: url("../images/fourth.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100vw;
+    background-image: url("../images/section--sixth--background-image.jpg");
     min-height: 37rem;
-}
-
-section h2 {
-    color: var(--font-color-primary);
 }
 
 .section--fifth h2{
     color: var(--font-color-secondary);
 }
 
-.header span {
-    color: var(--font-color-primary);
+.navigation__span {
     padding-left: var(--space--xl);
-}
-
-p {
-    color: var(--font-color-primary);
 }
 
 .section--fifth p {
     color: var(--font-color-secondary);
     text-align: center;
-    font-weight: lighter;
+    font-weight: var(--font-weight--lighter);
     padding-bottom: 4rem;
 }
 
@@ -149,25 +177,27 @@ h2 {
     padding-bottom: var(--space--l);
 }
 
-.section--seventh span {
-    font-size: var(--primary-font-size);
+.section--seventh__span {
     display: flex;
     justify-content: center;
-    color: var(--font-color-primary);
     padding-bottom: 3.5rem;
 }
 
 
 /* Mobile */
 @media only screen and (max-width: 768px) {
-
+    
     header {
         padding-top: var(--space--l);
     }
 
-    [src="images/second.jpg"],
-    [src="images/third.jpg"] {
-        /* width: 90vw; */
+    section {
+        padding-left: var(--space--xl);
+        padding-right: var(--space--xl);
+    }
+
+    [src="images/section--second__jpg.jpg"],
+    [src="images/section--third__jpg.jpg"] {
         height: 90vw;
         padding-top: var(--space--l);
     }
@@ -204,16 +234,8 @@ h2 {
     }
 
     h3 {
-        font-size: 2.5rem;
+        font-size: var(--font-size-h3--mobile);
         text-align: center;
-    }
-
-    p {
-        font-size: var(--primary-font-size);
-    }
-
-    a {
-        font-size: var(--primary-font-size);
     }
 
     .section--fifth h2,
@@ -227,7 +249,6 @@ h2 {
     }
 
     .section--seventh h3 {
-        color: var(--font-color-primary);
         margin-top: 0;
         margin-bottom: 0;
         padding-top: var(--space--l);
@@ -252,33 +273,26 @@ h2 {
         align-items: center;
     }
 
-    [name="First Name"],
-    [name="Last Name"],
-    [name="Email Address"] {
-        width: 24rem;
-        height: 5.5rem;
+    input[name="First Name"],
+    input[name="Last Name"],
+    input[name="Email Address"] {
+        width: var(--input-width--primary);
+        height: var(--input-height--primary);
         padding-left: var(--space--l);
-        border-style: none;
+        border-style: var(--input-border--style);
         color: var(--main-background-color);
     }
 
-    [type="submit"] {
-        width: 12rem;
-        height: 6rem;
-        text-align: center;
-        border-style: none;
-        background-color: var(--font-color-primary);
-        margin-bottom: 3.5rem;
-        color: var(--main-background-color);
-        font-weight: bold;
+    input[type="submit"] {
+        height: var(--input-height--secondary);
     }
 
-    [name="First Name"],
-    [name="Last Name"] {
+    input[name="First Name"],
+    input[name="Last Name"] {
         margin-bottom: var(--space--m);
     }
 
-    [name="Email Address"] {
+    input[name="Email Address"] {
         margin-bottom: var(--space--xxl)
     }
 
@@ -289,6 +303,7 @@ h2 {
     [src="images/hamburger-icon.png"] {
         height: 3.5rem;
         padding-right: var(--space--s);
+        margin-right: 2rem;
     }
 
     .navigation {
@@ -300,8 +315,8 @@ h2 {
 
 
 /* Desktop and tablet */
-@media only screen and (min-width: 769px) {
-    [src="images/hamburger-icon.png"] {
+@media only screen and (min-width: 768px) {
+    .hamburger--icon {
         display: none;
     }
 
@@ -312,14 +327,9 @@ h2 {
     }
 
     .navigation__links a {
-        font-size: var(--primary-font-size);
-        color: var(--font-color-primary);
+        font-size: var(--font-size--base);
     }
-
-    header span {
-        padding-right: 58vw;
-    }
-
+    
     header {
         padding-left: 5rem;
         padding-top: 5rem;
@@ -341,20 +351,18 @@ h2 {
         margin-left: var(--space--m);
         background-color: var(--font-color-primary);
         color: var(--font-color-secondary);
-        height: 4.5rem;
-        width: 13rem;
+        width: var(--button-width-secondary--desktop);
+        height: var(--button-height-secondary--desktop);
+    }
+
+    .section--first {
+        padding-left: 12vw;
     }
 
     .section--first h2 {
-        font-size: var(--font-size-h2-desktop);
-        padding-left: 12vw;
+        font-size: var(--font-size-h2--desktop);
         padding-top: 22vh;
         width: 45vw;
-    }
-
-    .section--first a {
-        font-size: var(--primary-font-size);
-        padding-left: 12vw;
     }
 
     .section--second img,
@@ -363,51 +371,47 @@ h2 {
         height: 60rem;
     }
 
-    .section--second {
-        padding-top: 80rem;
+    .section--second,
+    .section--third {
         padding-left: 10vw;
         padding-right: 12vw;
         padding-bottom: 10vh;
+    }
+
+    .section--second {
+        padding-top: 80rem;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
 
-    .section--second--text {
+    .section--second--text,
+    .section--third--text {
         width: 30vw;
     }
 
     .section--second h2 {
-        font-size: var(--font-size-h2-desktop);
+        font-size: var(--font-size-h2--desktop);
     }
 
     .section--second p {
-        font-size: var(--primary-font-size);
         padding-bottom: var(--space--xxl);
         line-height: var(--space--xl);
     }
 
     .section--third {
-        padding-left: 10vw;
-        padding-right: 12vw;
-        padding-bottom: 10vh;
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-around; 
     }
 
-    .section--third--text {
-        width: 30vw;
-    }
-
     .section--third h2 {
-        font-size: var(--font-size-h2-desktop);
+        font-size: var(--font-size-h2--desktop);
     }
 
     .section--third p {
-        font-size: var(--primary-font-size);
         padding-bottom: var(--space--xxl);
-        line-height: var(--space--xl);
+        line-height: 2.5rem;
     }
 
     .section--logos {
@@ -419,10 +423,14 @@ h2 {
         min-height: 35rem;
     }
 
-    .section--fifth {
-        text-align: center;
+    .section--fifth,
+    .section--sixth {
         padding-left: 25vw;
         padding-right: 25vw;
+    }
+
+    .section--fifth {
+        text-align: center;
         padding-top: 15vh;
         padding-bottom: 15vh;
     }
@@ -431,15 +439,9 @@ h2 {
         font-size: 4.5rem;
     }
 
-    .section--fifth p {
-        font-size: var(--primary-font-size);
-    }
-
     .section--sixth {
         min-height: 85rem;
         text-align: center;
-        padding-left: 25vw;
-        padding-right: 25vw;
         padding-top: 5vh;
         padding-bottom: 5vh;
     }
@@ -449,13 +451,12 @@ h2 {
     }
 
     .section--sixth p {
-        font-size: var(--primary-font-size);
         padding-bottom: 28vh;
     }
 
     .section--sixth button {
-        width: 20rem;
-        height: 6.2rem;
+        width: var(--button-width-primary--desktop);
+        height: var(--button-height-primary--desktop);
     }
 
     .section--seventh {
@@ -464,37 +465,22 @@ h2 {
     }
 
     .section--seventh h3 {
-        font-size: 4rem;;
+        font-size: var(--font-size-h3--desktop);
         margin: 0;
-        color: var(--font-color-primary);
-    }
-
-    .section--seventh p {
-        font-size: var(--primary-font-size);
-        color: black;
     }
 
     input {
-        font-size: var(--primary-font-size);
-        width: 24rem;
-        height: 5.5rem;
+        width: var(--input-width--primary);
+        height: var(--input-height--primary);
         padding-left: var(--space--xl);
-        border-style: none;
+        border-style: var(--input-border--style);
         color: var(--main-background-color);
-        font-weight: 200;
+        font-weight: var(--font-weight--lighter);
         margin-right: var(--space--m);
     }
 
-    [type="submit"] {
-        font-size: var(--primary-font-size);
-        width: 12rem;
-        height: 5.5rem;
+    input[type="submit"] {
+        height: var(--input-height--primary);
         padding-left: 0rem;
-        text-align: center;
-        border-style: none;
-        background-color: var(--font-color-primary);
-        margin-bottom: 3.5rem;
-        color: var(--main-background-color);
-        font-weight: bold;
     }
 }

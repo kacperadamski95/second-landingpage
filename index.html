@@ -52,9 +52,7 @@
                 <a>Login</a>
                 <a><button>Get started</button></a>
             </div>
-            <div>
                 <img src="images/hamburger-icon.png" class="hamburger--icon">
-            </div>
         </nav>
     </header>
 
@@ -67,7 +65,7 @@
         </div>
         <section class="section--second">
             <div class="second--image">
-                <img src="images/second.jpg">
+                <img src="images/section--second__jpg.jpg">
             </div>
             <div class="section--second--text">
                 <h2>Invest in your relationship with yourself</h2>
@@ -75,18 +73,18 @@
                     we can sometimes neglect our relationship with ourselves.
                     Let me be your advocate and show you a kinder,
                     gentler way to treat the most important person in your life.</p>
-                <a class="section_anchor"><button>Learn more</button></a>
+                <a><button>Learn more</button></a>
             </div>
         </section>
         <section class="section--third">
             <div class="third--image">
-                <img src="images/third.jpg">
+                <img src="images/section--third__jpg.jpg">
             </div>
             <div class="section--third--text">
                 <h2>Improve your relationship with others</h2>
                 <p>Be your best self, alone and with others, and cultivate deep and lasting friendships and
                     relationships.</p>
-                <a class="section_anchor"><button>Learn more</button></a>
+                <a><button>Learn more</button></a>
             </div>
         </section>
         <section class="section--logos section--fourth">
@@ -107,16 +105,20 @@
         <section class="section--seventh">
             <h3>Newsletter Sign-up</h3>
             <p>Sign up with your email address to receive news and updates.</p>
-            <form class="sign-up-form">
-                <input id="First Name" name="First Name" type="text" minlength="1" maxlength="100"
+            <form id="sign-up-form" class="sign-up-form">
+                <label for="first-name">Your First Name</label>
+                <input id="first-name" name="First Name" type="text" minlength="1" maxlength="100"
                     placeholder="First Name">
-                <input id="Last Name" name="Last Name" type="text" minlength="1" maxlength="100"
+                <label for="last-name">Your Last Name</label>
+                <input id="last-name" name="Last Name" type="text" minlength="1" maxlength="100"
                     placeholder="Last Name">
-                <input id="Email Address" name="Email Address" type="text" minlength="1" maxlength="100"
-                    placeholder="Email Address" required>
-                <input type="submit" value="Sign Up">
+                <label for="email-adress">Your Email Adress</label>
+                <input id="email-address" name="Email Address" type="text" minlength="1" maxlength="100"
+                    placeholder="Email Address" required >
+                <label for="submit">Click to submit</label>
+                <input id="submit" type="submit" value="Sign Up">
             </form>
-            <span>We respect your privacy</span>
+            <span class="section--seventh__span">We respect your privacy</span>
         </section>
     </main>
     <footer class="footer-information">
