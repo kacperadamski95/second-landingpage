@@ -15,6 +15,7 @@ html {
     --font-size-h2--desktop: 6.2rem;
     --font-size-h3--mobile: 2.5rem;
     --font-size-h3--desktop: 4rem;
+    --font-size-h4--desktop: 4rem;
     --font-weight--bold: 700;
     --font-weight--lighter: 100;
     --button-width--primary: 15.5rem;
@@ -104,9 +105,10 @@ footer {
 @media only screen and (min-width: 769px) {
     footer{
         padding-top: 10vh;
-        padding-left: 13vw;
-        padding-right: 12vw;
+        padding-left: 14vw;
+        padding-right: 18vw;
         padding-bottom: 10vh;
+        
     }
 
     .footer-information {
@@ -125,7 +127,19 @@ footer {
         padding-bottom: 3vh;
     }
 
-    .footer_icons {
+    .footer_icons a {
         padding-top: 1.5vw;
+        padding-right: 1.5rem;
+    }
+
+    .footer__column h4 {
+        font-size: var(--font-size-h4--desktop);
+        margin: auto;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+
+    .footer__column a:nth-of-type(1)  {
+        padding-top: 1.5rem;
     }
 }    

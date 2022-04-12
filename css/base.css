@@ -296,13 +296,8 @@ h2 {
         margin-bottom: var(--space--xxl)
     }
 
-    .navigation__links {
-        display: none;
-    }
-
     [src="images/hamburger-icon.png"] {
         height: 3.5rem;
-        padding-right: var(--space--s);
         margin-right: 2rem;
     }
 
@@ -310,6 +305,54 @@ h2 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .close--icon {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    .main--part {
+        display: none;
+    }
+
+    .navigation__links {
+        background-color: var(--primary-color);
+        opacity: 0;
+        width: 0.1rem;
+        height: 0.1rem;
+        transition: all 0.1s;
+    }
+
+    .navigation--mobile--active {
+        opacity: 1;
+        height: 100vh;
+        width: 100vw;
+        font-size: 4rem;
+        background-color: white;
+        color: var(--font-color-secondary);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
+
+    .navigation--mobile--active a {
+        padding-top: 1.5rem;
+    }
+
+    .navigation--mobile--active button {
+        background-color: rgb(0,0,0);
+        color: rgb(255,255,255)
+    }
+
+    .menu--icon--hidden {
+        opacity: 0;
+        height: 0.1rem; 
     }
 }
 
@@ -320,10 +363,15 @@ h2 {
         display: none;
     }
 
+    .close--icon {
+        display: none
+    }
+
     .navigation {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        padding-right: 5rem;
     }
 
     .navigation__links a {
@@ -460,13 +508,19 @@ h2 {
     }
 
     .section--seventh {
-        min-height: 40rem;
+        min-height: 50rem;
         text-align: center;
+        padding-top: 8vh;
     }
 
     .section--seventh h3 {
         font-size: var(--font-size-h3--desktop);
         margin: 0;
+    }
+
+    .section--seventh p {
+        padding-bottom: 2vw;
+        font-size: var(--font-size--base);
     }
 
     input {
