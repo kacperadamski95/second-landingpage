@@ -339,15 +339,40 @@ h2 {
         left: 0;
         right: 0;
         overflow: hidden;
+        padding-top: 2.2vh;
     }
 
     .navigation--mobile--active a {
-        padding-top: 1.5rem;
+        padding-top: 2.5rem;
     }
+
+    .navigation--mobile--active img {
+        margin-bottom: 13vh;
+        margin-left: 56vw;
+    }
+
+    .navigation--mobile--active--header span {
+        margin: 0;
+        font-size: 3rem;
+    }
+
+    .navigation--mobile--active--header {
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+
+    /* .navigation--mobile--active img::before {
+        content: 'ALMAR';
+        font-size: 3.2rem;
+        color: rgb(0,0,0);
+    } */
 
     .navigation--mobile--active button {
         background-color: rgb(0,0,0);
-        color: rgb(255,255,255)
+        color: rgb(255,255,255);
+        margin-top: 20vh;
     }
 
     .menu--icon--hidden {
@@ -365,6 +390,10 @@ h2 {
 
     .close--icon {
         display: none
+    }
+
+    .navigation--mobile--active--header span {
+        display: none;
     }
 
     .navigation {

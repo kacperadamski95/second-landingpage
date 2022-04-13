@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const menuIconClose = document.querySelector(".close--icon");
     const navigationMobile = document.querySelector(".navigation__links");
     const mainPart = document.querySelector(".main--hidden");
-    const footerPart = document.querySelector(".footer--hidden");
+    const footerPart = document.querySelector(".footer-information");
 
     menuIconHamburger.addEventListener("click", (event) => {
         mainPart.classList.add("main--part");

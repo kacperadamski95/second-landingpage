@@ -57,15 +57,19 @@ footer {
 /* Mobile */
 @media only screen and (max-width: 768px) {
     footer {    
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
         width: 100vw;
+        height: 40rem;
     }
 
     .footer-information p {
-        font-size: 1.5rem;
-        padding-top: 2.5rem;
-        padding-bottom: 1.5rem;
+        font-size: var(--font-size--base);
+        padding-top: var(--space--xl);
+        padding-bottom: var(--space--m);
+    }
+
+    .footer-information {
+        padding-left: 4vw;
+        padding-right: 4vw;
     }
 
     .footer-information,
@@ -77,27 +81,27 @@ footer {
     .footer-information h4 {
         font-size: 3.2rem;
         margin: 0;
-        padding-bottom: 2.5rem;
+        padding-bottom: var(--space--xl);
     }
 
     .footer-information a {
-        font-size: 1.5rem;
+        font-size: var(--font-size--base);
         font-weight: lighter;
         text-decoration: underline;
     }
 
     .footer-information a:nth-of-type(1) {
-        padding-bottom: 2.5rem;
+        padding-bottom: var(--space--xl);
     }
 
     .footer-information a:nth-of-type(2),
     .footer-information a:nth-of-type(3),
     .footer-information a:nth-of-type(4) {
-        padding-bottom: 1.5rem;
+        padding-bottom: var(--space--m);
     }
 
     .footer_icons a {
-        padding-right: 0.5rem;
+        padding-right: var(--space--xs);
     }
 }
 
@@ -129,7 +133,7 @@ footer {
 
     .footer_icons a {
         padding-top: 1.5vw;
-        padding-right: 1.5rem;
+        padding-right: var(--space--m);
     }
 
     .footer__column h4 {
@@ -140,6 +144,6 @@ footer {
     }
 
     .footer__column a:nth-of-type(1)  {
-        padding-top: 1.5rem;
+        padding-top: var(--space--m);
     }
 }    
